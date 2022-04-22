@@ -10,12 +10,6 @@
   "author": "Antonio Lopes <antoniolopesg@protonmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.17.9",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-typescript": "^7.16.7",
-    "babel-loader": "^8.2.5",
-    "esbuild": "^0.14.38",
-    "webpack": "^5.72.0",
-    "webpack-cli": "^4.9.2"
+    "esbuild": "^0.14.38"
   }
 }
