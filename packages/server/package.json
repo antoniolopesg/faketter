@@ -4,7 +4,9 @@
   "description": "The api server package",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node esbuild.config.js dev",
+    "build": "node esbuild.config.js build"
   },
   "keywords": [],
   "author": "Antonio Lopes <antoniolopesg@protonmail.com>",
