@@ -5,11 +5,13 @@ importers:
   packages/server:
     specifiers:
       esbuild: ^0.14.38
+      esbuild-dev-server: ^0.3.0
       esbuild-node-externals: ^1.4.1
     dependencies:
       esbuild-node-externals: 1.4.1_esbuild@0.14.38
     devDependencies:
       esbuild: 0.14.38
+      esbuild-dev-server: 0.3.0
 
 packages:
 
@@ -48,6 +50,92 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /esbuild-dev-server-darwin-arm64/0.3.0:
+    resolution: {integrity: sha512-HvKg1JfBhooY/pR60LaXkV2b1Pf2sWjjVn8lLCzxOMPh/DT28y3m/CmktT8Xdi7AUsvdh+7IGTzQwR/jZ1bYNw==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-dev-server-darwin-x64/0.3.0:
+    resolution: {integrity: sha512-QKph7OPuZZyyEK7Ehvvdqik2jm8iipBGTOjNsA3RgA6r6tQbqChA0ICkKQlLG6U2IUMj/eqc6ZGk/fdDJgckPw==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-dev-server-linux-arm/0.3.0:
+    resolution: {integrity: sha512-OdtPE5SkukZ1DYvA2l/ZjPY79Qj4Wjk93EO5aYWQRcZoeQgt//Nrll3hV144ObP32s4it/dGVkE3yiyaxeJ8gg==}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-dev-server-linux-arm64/0.3.0:
+    resolution: {integrity: sha512-4sZG6oDyLaS/Jo2Kdsh/Z7OPsmvxXgFu1umaJOyCkJ27WAY+l7LBbPiDRIV1ANIEce/puQ9nU3qTCWRYoSQiWA==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-dev-server-linux-x32/0.3.0:
+    resolution: {integrity: sha512-zvIKHcEpNs8G2F1HPkB13e9B0aE1ccY5KU4jCbBTKrZCvp1k4cgjuQI6E9wQUdmS5KFq5dvOteidqF9agddZFg==}
+    cpu: [x32]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-dev-server-linux-x64/0.3.0:
+    resolution: {integrity: sha512-aweybli47+13S8Y1KdAHkkHCbEr4EDKzGCuAHlU1BAeeCaarBjPnldvKPUuHRKzUTYTnAXXnbni9OFJCh0C9OA==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-dev-server-win32-arm64/0.3.0:
+    resolution: {integrity: sha512-BVcg9b1lXIJg7uftFJWfX2r93RYZndK6AqsMurjoc+l7QU4B0Cc+X9Z2xxMYyDlWH95YF+CckE8Hu5mXlbV7Rw==}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-dev-server-win32-x32/0.3.0:
+    resolution: {integrity: sha512-RTyBIGayeH1M6HpXMrwXfTllayflp9jingV5SGg1ca6fSlt6Q3HGTBwcfIFgPdS5MsUWaqDF3X3D1NO2lVRJfA==}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-dev-server-win32-x64/0.3.0:
+    resolution: {integrity: sha512-t3SU0rdXbkfBtmrNxeq1IShTyaCDzZg5HIUnVphJT2DUjVsF4ndJk9vJ6JvN/bPCt+XH6SvuAWvdMoUemLu7Bw==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-dev-server/0.3.0:
+    resolution: {integrity: sha512-2oYnryt+Yoqx6iADcuJ5/tC3/xptZf+x5sCus86VkUrjq0gny9nx7oL/eUkopxNIjygIm2SYGysQOdyAx3I7qQ==}
+    optionalDependencies:
+      esbuild-dev-server-darwin-arm64: 0.3.0
+      esbuild-dev-server-darwin-x64: 0.3.0
+      esbuild-dev-server-linux-arm: 0.3.0
+      esbuild-dev-server-linux-arm64: 0.3.0
+      esbuild-dev-server-linux-x32: 0.3.0
+      esbuild-dev-server-linux-x64: 0.3.0
+      esbuild-dev-server-win32-arm64: 0.3.0
+      esbuild-dev-server-win32-x32: 0.3.0
+      esbuild-dev-server-win32-x64: 0.3.0
+    dev: true
 
   /esbuild-freebsd-64/0.14.38:
     resolution: {integrity: sha512-epnPbhZUt93xV5cgeY36ZxPXDsQeO55DppzsIgWM8vgiG/Rz+qYDLmh5ts3e+Ln1wA9dQ+nZmVHw+RjaW3I5Ig==}
