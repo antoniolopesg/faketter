@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "esbuild": "^0.14.38"
+  },
+  "dependencies": {
+    "esbuild-node-externals": "^1.4.1"
   }
 }
