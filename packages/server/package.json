@@ -10,8 +10,7 @@
   "author": "Antonio Lopes <antoniolopesg@protonmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "esbuild": "^0.14.38",
-    "esbuild-dev-server": "^0.3.0"
+    "esbuild": "^0.14.38"
   },
   "dependencies": {
     "esbuild-node-externals": "^1.4.1"
