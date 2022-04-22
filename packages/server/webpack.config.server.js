@@ -1,5 +1,12 @@
 const path = require('path')
 
+const ReloadServerPlugin = require('./webpack/ReloadServerPlugin');
+
+const output = {
+  path: path.join(__dirname, 'build'),
+  filename: 'server.js'
+}
+
 module.exports = {
   target: 'node',
   mode: 'development',
@@ -8,10 +15,7 @@ module.exports = {
       './src/index.ts'
     ]
   },
-  output: {
-    path: path.join(__dirname, 'build'),
-    filename: 'server.js'
-  },
+  output,
   resolve: {
     extensions: ['.ts', '.js']
   },
@@ -24,5 +28,10 @@ module.exports = {
         include: /src/
       }
     ]
-  }
+  },
+  plugins: [
+    new ReloadServerPlugin({
+      script: path.join(output.path, output.filename)
+    })
+  ]
 }
