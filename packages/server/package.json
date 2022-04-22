@@ -1,11 +1,14 @@
 {
   "name": "@faketter/server",
   "version": "1.0.0",
+  "description": "The api server package",
   "main": "index.js",
-  "license": "MIT",
   "scripts": {
-    "serve": "webpack --watch -c webpack.config.server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "Antonio Lopes <antoniolopesg@protonmail.com>",
+  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",

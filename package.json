@@ -1,8 +1,15 @@
 {
   "name": "faketter",
   "version": "1.0.0",
+  "description": "A fullstack monorepo twitter clone",
   "main": "index.js",
-  "repository": "git@github.com:antoniolopesg/faketter.git",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
   "author": "Antonio Lopes <antoniolopesg@protonmail.com>",
-  "license": "MIT"
+  "license": "ISC",
+  "dependencies": {
+    "git-commit-msg-linter": "^4.1.2"
+  }
 }
