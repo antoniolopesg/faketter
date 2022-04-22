@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "Antonio Lopes <antoniolopesg@protonmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "git-commit-msg-linter": "^4.1.2"
+  }
 }
