@@ -12,12 +12,14 @@
   "author": "Antonio Lopes <antoniolopesg@protonmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "@types/kcors": "^2.2.6",
     "@types/koa": "^2.13.4",
     "@types/koa-bodyparser": "^4.3.7",
     "esbuild": "^0.14.38"
   },
   "dependencies": {
     "esbuild-node-externals": "^1.4.1",
+    "kcors": "^2.2.2",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0"
   }

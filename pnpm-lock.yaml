@@ -4,17 +4,21 @@ importers:
 
   packages/server:
     specifiers:
+      '@types/kcors': ^2.2.6
       '@types/koa': ^2.13.4
       '@types/koa-bodyparser': ^4.3.7
       esbuild: ^0.14.38
       esbuild-node-externals: ^1.4.1
+      kcors: ^2.2.2
       koa: ^2.13.4
       koa-bodyparser: ^4.3.0
     dependencies:
       esbuild-node-externals: 1.4.1_esbuild@0.14.38
+      kcors: 2.2.2
       koa: 2.13.4
       koa-bodyparser: 4.3.0
     devDependencies:
+      '@types/kcors': 2.2.6
       '@types/koa': 2.13.4
       '@types/koa-bodyparser': 4.3.7
       esbuild: 0.14.38
@@ -76,6 +80,12 @@ packages:
 
   /@types/http-errors/1.8.2:
     resolution: {integrity: sha512-EqX+YQxINb+MeXaIqYDASb6U6FCHbWjkj4a1CKDBks3d/QiB2+PqBLyO72vLDgAO1wUI4O+9gweRcQK11bTL/w==}
+    dev: true
+
+  /@types/kcors/2.2.6:
+    resolution: {integrity: sha512-y5gCt/795EWTR5AZrgbG2rez6l5aYF3RNIHrsLMl6U9LbzUUWcDOApAxu0pMCORTNdJr+jOrEW3NlZ++jnO0sQ==}
+    dependencies:
+      '@types/koa': 2.13.4
     dev: true
 
   /@types/keygrip/1.0.2:
@@ -557,6 +567,11 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       has-tostringtag: 1.0.0
+    dev: false
+
+  /kcors/2.2.2:
+    resolution: {integrity: sha512-rIqbKa2S0gT0wC/790jsQM6hNpABHBNWQ7+XYS1xJV6zOGxlanW+RtCmlDn6wPZsGpRk371yy8abfBgl2OTavg==}
+    engines: {node: '>= 6.0.0'}
     dev: false
 
   /keygrip/1.1.0:
