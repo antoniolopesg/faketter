@@ -12,9 +12,11 @@
   "author": "Antonio Lopes <antoniolopesg@protonmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "@types/koa": "^2.13.4",
     "esbuild": "^0.14.38"
   },
   "dependencies": {
-    "esbuild-node-externals": "^1.4.1"
+    "esbuild-node-externals": "^1.4.1",
+    "koa": "^2.13.4"
   }
 }
