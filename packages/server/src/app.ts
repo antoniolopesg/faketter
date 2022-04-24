@@ -2,6 +2,7 @@ import Koa from 'koa'
 import bodyParser from 'koa-bodyparser'
 import cors from 'kcors'
 import { getGraphQLParameters, processRequest, renderGraphiQL, sendResult, shouldRenderGraphiQL } from 'graphql-helix'
+
 import { schema } from './graphql/schema'
 
 const app = new Koa()
