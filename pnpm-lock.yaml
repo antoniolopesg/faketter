@@ -10,12 +10,14 @@ importers:
       esbuild: ^0.14.38
       esbuild-node-externals: ^1.4.1
       graphql: ^16.3.0
+      graphql-helix: ^1.12.0
       kcors: ^2.2.2
       koa: ^2.13.4
       koa-bodyparser: ^4.3.0
     dependencies:
       esbuild-node-externals: 1.4.1_esbuild@0.14.38
       graphql: 16.3.0
+      graphql-helix: 1.12.0_graphql@16.3.0
       kcors: 2.2.2
       koa: 2.13.4
       koa-bodyparser: 4.3.0
@@ -497,6 +499,14 @@ packages:
       function-bind: 1.1.1
       has: 1.0.3
       has-symbols: 1.0.3
+    dev: false
+
+  /graphql-helix/1.12.0_graphql@16.3.0:
+    resolution: {integrity: sha512-wTu1m/ZFBCgzLPCg/dHO4cNy9JR5Sq/3RqDVblqrU3b/Yem7EXZtQMzG045tHqkCdbgcgQl+kIkXDur1yLfdtw==}
+    peerDependencies:
+      graphql: ^15.3.0 || ^16.0.0
+    dependencies:
+      graphql: 16.3.0
     dev: false
 
   /graphql/16.3.0:
