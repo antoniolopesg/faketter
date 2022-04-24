@@ -1,9 +1,10 @@
-interface Foo {
-  bar: number;
-}
+import { createServer } from 'http'
+import { app } from './app'
 
-const foo: Foo = {
-  bar: 12
-}
+(async () => {
+  const server = createServer(app.callback())
 
-console.log(foo)
+  server.listen(8080, () => {
+    console.log('Server listening on http://localhost:8080')
+  })
+})()
