@@ -1,14 +1,14 @@
-import { GraphQLObjectType, GraphQLFieldConfig, GraphQLString } from "graphql";
+import { GraphQLObjectType, GraphQLFieldConfig, GraphQLString } from 'graphql';
 
 const foo: GraphQLFieldConfig<any, any, any> = {
   resolve: (_root, _args, _context) => 'bar',
-  type: GraphQLString
-}
+  type: GraphQLString,
+};
 
-export const query  = new GraphQLObjectType({
+export const query = new GraphQLObjectType({
   name: 'Query',
   description: 'Root Query',
   fields: () => ({
-    foo
-  })
-})
+    foo,
+  }),
+});
