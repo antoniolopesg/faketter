@@ -37,6 +37,7 @@ importers:
 
   packages/server:
     specifiers:
+      '@prisma/client': ^3.13.0
       '@types/kcors': ^2.2.6
       '@types/koa': ^2.13.4
       '@types/koa-bodyparser': ^4.3.7
@@ -53,6 +54,7 @@ importers:
       ts-node: ^10.7.0
       typescript: ^4.6.3
     dependencies:
+      '@prisma/client': 3.13.0_prisma@3.13.0
       dotenv: 16.0.0
       esbuild-node-externals: 1.4.1_esbuild@0.14.38
       graphql: 16.3.0
@@ -151,6 +153,24 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
     dev: true
+
+  /@prisma/client/3.13.0_prisma@3.13.0:
+    resolution: {integrity: sha512-lnEA2tTyVbO5mS1ehmHJQKBDiKB8shaR6s3azwj3Azfi5XHIfnqmkolLCvUeFYnkDCNVzGXJpUgKwQt/UOOYVQ==}
+    engines: {node: '>=12.6'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 3.13.0-17.efdf9b1183dddfd4258cd181a72125755215ab7b
+      prisma: 3.13.0
+    dev: false
+
+  /@prisma/engines-version/3.13.0-17.efdf9b1183dddfd4258cd181a72125755215ab7b:
+    resolution: {integrity: sha512-TGp9rvgJIKo8NgvAHSwOosbut9mTA7VC6/rpQI9gh+ySSRjdQFhbGyNUiOcQrlI9Ob2DWeO7y4HEnhdKxYiECg==}
+    dev: false
 
   /@prisma/engines/3.13.0-17.efdf9b1183dddfd4258cd181a72125755215ab7b:
     resolution: {integrity: sha512-Ip9CcCeUocH61eXu4BUGpvl5KleQyhcUVLpWCv+0ZmDv44bFaDpREqjGHHdRupvPN/ugB6gTlD9b9ewdj02yVA==}
