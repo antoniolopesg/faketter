@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node esbuild.config.js dev",
     "build": "node esbuild.config.js build",
-    "start": "pnpm run build && node build/index.js"
+    "start": "pnpm -r run build && node build/index.js"
   },
   "keywords": [],
   "author": "Antonio Lopes <antoniolopesg@protonmail.com>",
