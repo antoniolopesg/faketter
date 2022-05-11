@@ -10,6 +10,7 @@
   "author": "Antonio Lopes <antoniolopesg@protonmail.com>",
   "license": "ISC",
   "dependencies": {
+    "esbuild": "^0.14.38",
     "git-commit-msg-linter": "^4.1.2"
   },
   "devDependencies": {
