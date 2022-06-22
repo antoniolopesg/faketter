@@ -13,6 +13,7 @@
   "author": "Antonio Lopes <antoniolopesg@protonmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "@types/kcors": "^2.2.6",
     "@types/koa": "^2.13.4",
     "@types/koa-bodyparser": "^4.3.7",
@@ -24,6 +25,7 @@
   },
   "dependencies": {
     "@prisma/client": "^3.13.0",
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.0",
     "esbuild-node-externals": "^1.4.1",
     "graphql": "^16.3.0",

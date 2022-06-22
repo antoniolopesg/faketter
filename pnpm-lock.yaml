@@ -40,10 +40,12 @@ importers:
   packages/server:
     specifiers:
       '@prisma/client': ^3.13.0
+      '@types/bcryptjs': ^2.4.2
       '@types/kcors': ^2.2.6
       '@types/koa': ^2.13.4
       '@types/koa-bodyparser': ^4.3.7
       '@types/node': ^17.0.30
+      bcryptjs: ^2.4.3
       dotenv: ^16.0.0
       esbuild: ^0.14.38
       esbuild-node-externals: ^1.4.1
@@ -58,6 +60,7 @@ importers:
       typescript: ^4.6.3
     dependencies:
       '@prisma/client': 3.13.0_prisma@3.13.0
+      bcryptjs: 2.4.3
       dotenv: 16.0.0
       esbuild-node-externals: 1.4.1_esbuild@0.14.38
       graphql: 16.3.0
@@ -67,6 +70,7 @@ importers:
       koa: 2.13.4
       koa-bodyparser: 4.3.0
     devDependencies:
+      '@types/bcryptjs': 2.4.2
       '@types/kcors': 2.2.6
       '@types/koa': 2.13.4
       '@types/koa-bodyparser': 4.3.7
@@ -200,6 +204,10 @@ packages:
     resolution: {integrity: sha512-jOdnI/3qTpHABjM5cx1Hc0sKsPoYCp+DP/GJRGtDlPd7fiV9oXGGIcjW/ZOxLIvjGz8MA+uMZI9metHlgqbgwQ==}
     dependencies:
       '@types/node': 17.0.30
+    dev: true
+
+  /@types/bcryptjs/2.4.2:
+    resolution: {integrity: sha512-LiMQ6EOPob/4yUL66SZzu6Yh77cbzJFYll+ZfaPiPPFswtIlA/Fs1MzdKYA7JApHU49zQTbJGX3PDmCpIdDBRQ==}
     dev: true
 
   /@types/body-parser/1.19.2:
@@ -568,6 +576,10 @@ packages:
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
     dev: true
+
+  /bcryptjs/2.4.3:
+    resolution: {integrity: sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ==}
+    dev: false
 
   /brace-expansion/1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
