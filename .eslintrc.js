@@ -19,6 +19,7 @@ module.exports = {
     'prettier/prettier': 'error',
     'import/extensions': ['error', 'ignorePackages', { ts: 'never' }],
     'import/prefer-default-export': 'off',
+    'no-unused-vars': ['error', { argsIgnorePattern: '_' }],
   },
   settings: {
     'import/resolver': {
