@@ -49,6 +49,7 @@ importers:
       esbuild-node-externals: ^1.4.1
       graphql: ^16.3.0
       graphql-helix: ^1.12.0
+      graphql-relay: ^0.10.0
       kcors: ^2.2.2
       koa: ^2.13.4
       koa-bodyparser: ^4.3.0
@@ -61,6 +62,7 @@ importers:
       esbuild-node-externals: 1.4.1_esbuild@0.14.38
       graphql: 16.3.0
       graphql-helix: 1.12.0_graphql@16.3.0
+      graphql-relay: 0.10.0_graphql@16.3.0
       kcors: 2.2.2
       koa: 2.13.4
       koa-bodyparser: 4.3.0
@@ -177,7 +179,6 @@ packages:
   /@prisma/engines/3.13.0-17.efdf9b1183dddfd4258cd181a72125755215ab7b:
     resolution: {integrity: sha512-Ip9CcCeUocH61eXu4BUGpvl5KleQyhcUVLpWCv+0ZmDv44bFaDpREqjGHHdRupvPN/ugB6gTlD9b9ewdj02yVA==}
     requiresBuild: true
-    dev: true
 
   /@tsconfig/node10/1.0.8:
     resolution: {integrity: sha512-6XFfSQmMgq0CFLY1MslA/CPUfhIL919M1rMsa5lP2P097N2Wd1sSX0tx1u4olM16fLNhtHZpRhedZJphNJqmZg==}
@@ -1531,6 +1532,15 @@ packages:
       graphql: 16.3.0
     dev: false
 
+  /graphql-relay/0.10.0_graphql@16.3.0:
+    resolution: {integrity: sha512-44yBuw2/DLNEiMypbNZBt1yMDbBmyVPVesPywnteGGALiBmdyy1JP8jSg8ClLePg8ZZxk0O4BLhd1a6U/1jDOQ==}
+    engines: {node: ^12.20.0 || ^14.15.0 || >= 15.9.0}
+    peerDependencies:
+      graphql: ^16.2.0
+    dependencies:
+      graphql: 16.3.0
+    dev: false
+
   /graphql/16.3.0:
     resolution: {integrity: sha512-xm+ANmA16BzCT5pLjuXySbQVFwH3oJctUVdy81w1sV0vBU0KgDdBGtxQOUd5zqOBk/JayAFeG8Dlmeq74rjm/A==}
     engines: {node: ^12.22.0 || ^14.16.0 || >=16.0.0}
@@ -2160,7 +2170,6 @@ packages:
     dependencies:
       '@prisma/engines': 3.13.0-17.efdf9b1183dddfd4258cd181a72125755215ab7b
       ts-pattern: 4.0.2
-    dev: true
 
   /prop-types/15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
@@ -2435,7 +2444,6 @@ packages:
 
   /ts-pattern/4.0.2:
     resolution: {integrity: sha512-eHqR/7A6fcw05vCOfnL6RwgGJbVi9G/YHTdYdjYmElhDdJ1SMn7pWs+6+YuxygaFwQS/g+cIDlu+UD8IVpur1A==}
-    dev: true
 
   /tsconfig-paths/3.14.1:
     resolution: {integrity: sha512-fxDhWnFSLt3VuTwtvJt5fpwxBHg5AdKWMsgcPOOIilyjymcYVZoCQF8fvFRezCNfblEXmi+PcM1eYHeOAgXCOQ==}
