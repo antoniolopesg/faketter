@@ -9,10 +9,13 @@ datasource db {
 
 model User {
   id          Int      @id @default(autoincrement())
-  name        String
-  email       String?  @unique
-  phone       String?  @unique
-  dateOfBirth DateTime @db.Date
-  createdAt   DateTime @default(now()) @db.Timestamptz
-  updatedAt   DateTime @updatedAt @db.Timestamptz
+  name        String   @db.VarChar()
+  email       String?  @unique @db.VarChar()
+  phone       String?  @unique @db.VarChar()
+  password    String   @db.VarChar()
+  dateOfBirth DateTime @map("date_of_birth") @db.Date
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  @@map("users")
 }
