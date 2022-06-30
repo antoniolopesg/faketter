@@ -4,7 +4,7 @@
   "description": "The api server package",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --config jest.config.js",
     "dev": "node esbuild.config.js dev",
     "build": "node esbuild.config.js build",
     "start": "pnpm -r run build && node build/index.js"
