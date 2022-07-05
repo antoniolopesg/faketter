@@ -13,13 +13,15 @@ export const userSignupMutation = mutationWithClientMutationId({
     dateOfBirth: { type: new GraphQLNonNull(GraphQLString) },
   },
   async mutateAndGetPayload({ email, password, dateOfBirth, ...rest }) {
-    const userUsingEmailInput = await prisma.user.findFirst({
+    const amountOfUsersUsingEmail = await prisma.user.count({
       where: {
         email,
       },
     });
 
-    if (userUsingEmailInput) {
+    const emailAlreadyInUse = amountOfUsersUsingEmail >= 1;
+
+    if (emailAlreadyInUse) {
       throw new Error('The email has already been used');
     }
 
