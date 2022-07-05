@@ -19,7 +19,7 @@ export const userSignupMutation = mutationWithClientMutationId({
       },
     });
 
-    const emailAlreadyInUse = amountOfUsersUsingEmail >= 1;
+    const emailAlreadyInUse = amountOfUsersUsingEmail > 0;
 
     if (emailAlreadyInUse) {
       throw new Error('The email has already been used');
