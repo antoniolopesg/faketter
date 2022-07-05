@@ -12,7 +12,7 @@ export const userSignupMutation = mutationWithClientMutationId({
     password: { type: new GraphQLNonNull(GraphQLString) },
     dateOfBirth: { type: new GraphQLNonNull(GraphQLString) },
   },
-  async mutateAndGetPayload({ email, password, ...rest }) {
+  async mutateAndGetPayload({ email, password, dateOfBirth, ...rest }) {
     const userUsingEmailInput = await prisma.user.findFirst({
       where: {
         email,
@@ -26,6 +26,7 @@ export const userSignupMutation = mutationWithClientMutationId({
     const user = {
       email,
       password: await hashPassword(password),
+      dateOfBirth: new Date(dateOfBirth),
       ...rest,
     };
 
