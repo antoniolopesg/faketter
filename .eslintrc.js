@@ -29,6 +29,7 @@ module.exports = {
     'react/jsx-filename-extension': ['error', { extensions: ['.ts', '.tsx'] }],
     'react/react-in-jsx-scope': 'off',
     'react/jsx-no-bind': 'off',
+    'react/jsx-no-duplicate-props': 'off',
   },
   settings: {
     'import/resolver': {
