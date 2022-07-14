@@ -28,6 +28,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.ts', '.tsx'] }],
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-no-bind': 'off',
   },
   settings: {
     'import/resolver': {
