@@ -1,0 +1,33 @@
+"""Root Query"""
+type Query {
+  foo: String
+}
+
+"""Root Mutation"""
+type Mutation {
+  signup(input: UserSignupInput!): UserSignupPayload
+}
+
+type UserSignupPayload {
+  token: String!
+  me: User!
+  clientMutationId: String
+}
+
+"""User Type"""
+type User {
+  """The ID of an object"""
+  id: ID!
+  name: String!
+  email: String!
+  phone: String!
+  dateOfBirth: String!
+}
+
+input UserSignupInput {
+  email: String!
+  name: String!
+  password: String!
+  dateOfBirth: String!
+  clientMutationId: String
+}

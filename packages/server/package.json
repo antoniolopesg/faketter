@@ -8,7 +8,8 @@
     "test:dev": "pnpm run test --watch",
     "dev": "node esbuild.config.js dev",
     "build": "node esbuild.config.js build",
-    "start": "pnpm -r run build && node build/index.js"
+    "start": "pnpm -r run build && node build/index.js",
+    "gen-schema": "npx esr ./scripts/generateOrUpdateSchema.ts"
   },
   "keywords": [],
   "author": "Antonio Lopes <antoniolopesg@protonmail.com>",
