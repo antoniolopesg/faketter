@@ -8,7 +8,8 @@
     "test:dev": "pnpm run test --watch",
     "dev": "node esbuild.config.js dev",
     "build": "node esbuild.config.js build",
-    "start": "pnpm -r run build && node build/index.js"
+    "start": "pnpm -r run build && node build/index.js",
+    "gen-schema": "npx esr ./scripts/generateOrUpdateSchema.ts"
   },
   "keywords": [],
   "author": "Antonio Lopes <antoniolopesg@protonmail.com>",
@@ -20,6 +21,7 @@
     "@types/koa-bodyparser": "^4.3.7",
     "@types/node": "^17.0.30",
     "esbuild": "^0.14.38",
+    "esbuild-runner": "^2.2.1",
     "jest": "^28.1.2",
     "jest-environment-node": "^28.1.2",
     "prisma": "^3.13.0",
