@@ -13,24 +13,66 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
-  FormLabel,
-  FormControl,
-  Input,
-  InputRightElement,
-  InputGroup,
 } from '@chakra-ui/react';
-import { useState } from 'react';
+import * as Yup from 'yup';
+import { Form, FormikProvider, useFormik } from 'formik';
 import { FaTwitter } from 'react-icons/fa';
 
 import BackgroundSignup from '../../assets/background-signup.jpg';
+import { Input } from '../../shared-components/Input';
+
+type SignupForm = {
+  name: string;
+  email: string;
+  password: string;
+  dateOfBirth: string;
+};
+
+const initialValues = {
+  email: '',
+  name: '',
+  password: '',
+  dateOfBirth: '',
+};
+
+const signupSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(3, 'Name must have at least 3 characters')
+    .required('Name is required'),
+  email: Yup.string()
+    .email('The email needs to be a valid email')
+    .required('Email is required'),
+  password: Yup.string()
+    .min(7, 'Password must have at least 7 characters')
+    .test({
+      message: 'Password must have at least 1 number',
+      test: (value) => !!value && value.search(/[0-9]/) >= 0,
+    })
+    .test({
+      message: 'Password must have at least 1 letter',
+      test: (value) => !!value && value.search(/[a-zA-z]/) >= 0,
+    })
+    .test({
+      message: 'Password must have at least 1 special character',
+      test: (value) => !!value && value.search(/[^a-zA-Z0-9\s]/) >= 0,
+    })
+    .required('Password is required'),
+  dateOfBirth: Yup.date().required('Date of Birth is required'),
+});
 
 export function SignupPage() {
-  const [showPassword, setShowPassword] = useState(false);
-  const { isOpen, onClose, onOpen } = useDisclosure();
+  const formik = useFormik<SignupForm>({
+    initialValues,
+    validationSchema: signupSchema,
+    validateOnMount: false,
+    onSubmit: (values) => {
+      /* eslint-disable no-console */
+      console.log(values); // TODO: call the mutation
+    },
+  });
 
-  function handleTogglePassword() {
-    setShowPassword(!showPassword);
-  }
+  const { isSubmitting, handleSubmit } = formik;
+  const { isOpen, onClose, onOpen } = useDisclosure();
 
   return (
     <>
@@ -127,7 +169,14 @@ export function SignupPage() {
         </Box>
       </Box>
 
-      <Modal isOpen={isOpen} onClose={onClose} isCentered>
+      <Modal
+        isOpen={isOpen}
+        onClose={() => {
+          onClose();
+          formik.resetForm();
+        }}
+        isCentered
+      >
         <ModalOverlay bg="whiteAlpha.200" />
         <ModalContent>
           <ModalHeader bg="black" color="white">
@@ -135,41 +184,24 @@ export function SignupPage() {
           </ModalHeader>
           <ModalCloseButton borderRadius="50%" />
           <ModalBody bg="black">
-            <Stack as="form">
-              <FormControl>
-                <FormLabel htmlFor="name">Name</FormLabel>
-                <Input id="name" variant="filled" />
-              </FormControl>
-
-              <FormControl>
-                <FormLabel htmlFor="email">Email</FormLabel>
-                <Input id="email" type="email" variant="filled" />
-              </FormControl>
-              <FormControl>
-                <FormLabel htmlFor="password">Password</FormLabel>
-                <InputGroup>
-                  <Input
-                    id="password"
-                    type="password"
-                    variant="filled"
-                    type={showPassword ? 'text' : 'password'}
-                  />
-                  <InputRightElement width="4.5rem">
-                    <Button
-                      h="1.75rem"
-                      size="sm"
-                      onClick={handleTogglePassword}
-                    >
-                      {showPassword ? 'Hide' : 'Show'}
-                    </Button>
-                  </InputRightElement>
-                </InputGroup>
-              </FormControl>
-              <FormControl>
-                <FormLabel htmlFor="date">Date of birth</FormLabel>
-                <Input size="md" id="date" type="date" variant="filled" />
-              </FormControl>
-            </Stack>
+            <FormikProvider value={formik}>
+              <Stack as={Form}>
+                <Input label="Name" name="name" validate />
+                <Input label="Email" name="email" type="email" validate />
+                <Input
+                  label="Password"
+                  type="password"
+                  name="password"
+                  validate
+                />
+                <Input
+                  label="Date of birth"
+                  type="date"
+                  name="dateOfBirth"
+                  validate
+                />
+              </Stack>
+            </FormikProvider>
           </ModalBody>
 
           <ModalFooter bg="black">
@@ -182,6 +214,8 @@ export function SignupPage() {
               bgColor="white"
               _hover={{ bgColor: 'whiteAlpha.900' }}
               _active={{ bgColor: 'whiteAlpha.900' }}
+              isLoading={isSubmitting}
+              onClick={(_) => handleSubmit()}
             >
               Enviar
             </Button>
